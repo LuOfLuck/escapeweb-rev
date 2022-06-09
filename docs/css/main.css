@@ -9,6 +9,7 @@
 :root{
 	--white: #FFFFFF;
 	--orange: #F5BA48;
+	--green: #4BF548;
 }
 .main{
 	font-size: 10px;
@@ -106,10 +107,11 @@
 	cursor: pointer;
 	background: transparent;
 	border: 3px solid var(--white);
-	box-shadow: 0px 5px 15px black, 0px 5px 10px rgba(0,0,0, 0.5) inset,
-				5px 0px 5px rgba(0,0,0, 0.5), 5px 0px 10px rgba(0,0,0, 0.5) inset;
-	transition: .2s linear;
-	
+	box-shadow: 0px 100px 97px rgba(0, 0, 0, 0.208511), 0px 50.0488px 48.5474px rgba(0, 0, 0, 0.303118), 0px 30.1471px 29.2427px rgba(0, 0, 0, 0.373322);
+	transition: .2s linear, 0s linear transform;
+}
+.button:active{
+	transform: translate(0px, 2px);
 }
 .button:hover{
 	box-shadow:none;
@@ -154,6 +156,36 @@
 	height: 2.6em;
 }
 
+.main__alert{
+	width: 80%;
+	padding: 20px 20px;
+	position: fixed;
+	bottom: -150px;
+	transition: .3s linear;
+	/* Rectangle 3 */
+	box-sizing: border-box;
+	background: linear-gradient(180deg, #434141 0%, #363535 100%);
+	box-shadow: 0px 100px 97px rgba(0, 0, 0, 0.208511), 0px 50.0488px 48.5474px rgba(0, 0, 0, 0.303118), 0px 30.1471px 29.2427px rgba(0, 0, 0, 0.373322), 0px 19.3198px 18.7402px rgba(0, 0, 0, 0.435), 0px 12.5216px 12.1459px rgba(0, 0, 0, 0.496678), 0px 7.88218px 7.64571px rgba(0, 0, 0, 0.566882), 0px 4.5288px 4.39294px rgba(0, 0, 0, 0.661489), 0px 1.99324px 1.93344px rgba(0, 0, 0, 0.87);
+	border-radius: 50px 50px 0px 0px;
+
+}
+.main__alert--active{
+	bottom: 0px;
+
+}
+.main__alert p{
+
+	font-family: 'Just Me Again Down Here';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2.6em;
+	text-align: center;
+	color: #FFFFFF;
+}
+.main__alert p a{
+	text-decoration: none;
+	color: var(--green);
+}
 @media(max-width: 760px) {
 	.main{
 		font-size: 8px;
