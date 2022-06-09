@@ -1,0 +1,183 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+:root{
+	--white: #FFFFFF;
+	--orange: #F5BA48;
+}
+.main{
+	font-size: 10px;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(#302E2E 0%, #323130 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.banner{
+	width: 80%;
+	height: auto;
+	padding: 30px 20px;
+	display: flex;
+	flex-direction: column;
+	transform: scale(.9);
+}
+.border-drop{
+	box-sizing: border-box;
+	border: 5px solid var(--white);
+	box-shadow: 0px 5px 15px rgba(0,0,0, 0.5), 0px 5px 10px rgba(0,0,0, 0.5) inset,
+				5px 0px 5px rgba(0,0,0, 0.5), 5px 0px 10px rgba(0,0,0, 0.5) inset;
+}
+.centrar{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.banner__icon__circule{
+	width: 25px;
+	height: 25px;
+	padding: 5px;
+	margin-left: auto;
+	border: 2px solid white;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.banner__top{
+}
+.banner__top__h1{
+	font-family: 'Just Me Again Down Here', cursive;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 7em;
+	height: 80px;
+	text-align: center;
+	filter: unset;
+	color: var(--white);
+	margin-top: 0px;
+}
+.p--lacquer{
+	font-family: 'Lacquer', cursive;
+	font-style: normal;
+	font-weight: 100;
+	color: var(--white);
+	font-size: 2em;
+}
+.banner__top__p{
+	text-align: center;
+	margin-top: 0px;
+}
+.banner__mid{
+	display: flex;
+	width: 100%;
+	margin: 50px 0px;
+}
+.banner__mid > *{
+	margin: auto;
+}
+.banner__mid__p{
+
+}
+.banner__mid__button{
+	padding: 5px 10px;
+}
+.banner__mid__button svg path{
+	fill: var(--white);
+	transition: .2s linear;
+}
+.button__play .play{
+	display: block;
+}
+.button__pause .play{
+	display: none;
+}
+.button__play .pause{
+	display: none;
+}
+.button__pause .pause{
+	display: block;
+}
+
+.button{
+	cursor: pointer;
+	background: transparent;
+	border: 3px solid var(--white);
+	box-shadow: 0px 5px 15px black, 0px 5px 10px rgba(0,0,0, 0.5) inset,
+				5px 0px 5px rgba(0,0,0, 0.5), 5px 0px 10px rgba(0,0,0, 0.5) inset;
+	transition: .2s linear;
+	
+}
+.button:hover{
+	box-shadow:none;
+	background: var(--white);
+}
+.button:hover .button__span{
+	color: black;
+}
+.banner__mid__button{
+	padding-left: 15px;
+}
+.banner__mid__button:hover svg path{
+	fill: rgba(0, 0, 0, .7) !important;
+}
+.button__span{
+	transition: .2s linear;
+	margin: auto 5px;
+}
+.banner__bottom{
+	display: flex;
+	width: 60%;
+	margin: auto;
+} 
+.banner__bottom .icon{
+	margin: auto;
+}
+.svg--redes{
+	width: 4em;
+	height: 4em;
+	cursor: pointer;
+}
+.svg--redes path{
+	fill: var(--orange) ;
+	transition: .2s linaer;
+}
+.svg--redes:hover path{
+	fill: var(--white)!important;
+}
+
+.sgv--button{
+	width: 4em;
+	height: 4em;
+}
+
+@media(max-width: 760px) {
+	.main{
+		font-size: 8px;
+	}
+	.banner{
+		font-size: 8px;
+		width: 90%;
+		transform: scale(1);
+	}
+	.banner__mid__button {
+		font-size: 8px;
+	}
+}
+@media(max-width: 500px){
+	.main{
+		font-size: 7px;
+	}
+	.banner{
+		font-size: 7px;
+		width: 95%;
+		transform: scale(1);
+		padding: 40px 30px;
+	}
+	.banner__mid__button {
+		font-size: 7px;
+	}
+}
