@@ -74,7 +74,7 @@
 .banner__mid{
 	display: flex;
 	width: 100%;
-	margin: 50px 0px;
+	margin: 80px 0px 50px 0px;
 }
 .banner__mid > *{
 	margin: auto;
@@ -162,6 +162,10 @@
 		font-size: 8px;
 		width: 90%;
 		transform: scale(1);
+		padding: 20px 20px 40px 20px;
+	}
+	.banner__mid{
+		margin: 150px 0px 50px 0px;
 	}
 	.banner__mid__button {
 		font-size: 8px;
@@ -176,6 +180,9 @@
 		width: 95%;
 		transform: scale(1);
 		padding: 40px 30px;
+	}
+	.banner__mid{
+		margin: 150px 0px 50px 0px;
 	}
 	.banner__mid__button {
 		font-size: 7px;
