@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap');
 *{
 	margin: 0;
 	padding: 0;
@@ -10,15 +11,26 @@
 	--white: #FFFFFF;
 	--orange: #F5BA48;
 	--green: #4BF548;
+	--blue: #263AF1;
+	--red: #FF2525;
+}
+body{
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+  width: 0px;
+  background-color: transparent;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
 }
 .main{
-	font-size: 10px;
-	width: 100vw;
-	height: 100vh;
+	font-size: 9px;
+	min-width: 100vw;
+	min-height: 100vh;
 	background: linear-gradient(#302E2E 0%, #323130 100%);
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 .banner{
 	width: 80%;
@@ -38,6 +50,10 @@
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	align-items: center;
+}
+.centrar--lineal{
+	flex-direction: column;
 }
 .banner__icon__circule{
 	width: 25px;
@@ -61,10 +77,18 @@
 	color: var(--white);
 	margin-top: 0px;
 }
+
 .p--lacquer{
 	font-family: 'Lacquer', cursive;
 	font-style: normal;
 	font-weight: 100;
+	color: var(--white);
+	font-size: 2em;
+}
+.p--koho{
+	font-family: 'KoHo', sans-serif;
+	font-style: normal;
+	font-weight: 700;
 	color: var(--white);
 	font-size: 2em;
 }
@@ -109,6 +133,9 @@
 	border: 3px solid var(--white);
 	box-shadow: 0px 100px 97px rgba(0, 0, 0, 0.208511), 0px 50.0488px 48.5474px rgba(0, 0, 0, 0.303118), 0px 30.1471px 29.2427px rgba(0, 0, 0, 0.373322);
 	transition: .2s linear, 0s linear transform;
+	color: white;
+	padding: 5px;
+	font-size: 1.5em;
 }
 .button:active{
 	transform: translate(0px, 2px);
@@ -116,6 +143,7 @@
 .button:hover{
 	box-shadow:none;
 	background: var(--white);
+	color: black;
 }
 .button:hover .button__span{
 	color: black;
@@ -185,6 +213,80 @@
 .main__alert p a{
 	text-decoration: none;
 	color: var(--green);
+}
+
+.box--obscuro{
+	box-sizing: border-box;
+	background: linear-gradient(180deg, #434141 0%, #363535 100%);
+	box-shadow: 0px 100px 97px rgba(0, 0, 0, 0.208511), 0px 50.0488px 48.5474px rgba(0, 0, 0, 0.303118), 0px 30.1471px 29.2427px rgba(0, 0, 0, 0.373322), 0px 19.3198px 18.7402px rgba(0, 0, 0, 0.435), 0px 12.5216px 12.1459px rgba(0, 0, 0, 0.496678), 0px 7.88218px 7.64571px rgba(0, 0, 0, 0.566882), 0px 4.5288px 4.39294px rgba(0, 0, 0, 0.661489), 0px 1.99324px 1.93344px rgba(0, 0, 0, 0.87);
+}
+
+.input{
+	background: #F4F0F0;
+	box-shadow: 0px 38px 193px rgba(0, 0, 0, 0.169635), 0px 8.4878px 80.0501px rgba(0, 0, 0, 0.250365), 0px 2.52704px 45.5078px rgba(0, 0, 0, 0.42);
+	border-radius: 3px;
+	border: none;
+	padding: 5px 0px;
+	text-align: center;
+	transition: .3s linear;
+}
+.input:focus{
+	background: red;
+	background: white;
+}
+.input::placeholder{
+	font-family: 'Kyiv*Type Serif';
+	font-style: normal;
+	font-weight: 350;
+	font-size: 1em;
+	line-height: 24px;
+	text-align: center;
+
+	color: #4A4A4A;
+
+}
+.music{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	transform: scale(.8);
+}
+.music__element{
+	cursor: pointer;
+	margin: 22px;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 3px solid #FFFFFF;
+	filter: drop-shadow(0px 4.5288px 4.39294px rgba(0, 0, 0, 0.661489)) drop-shadow(0px 1.99324px 1.93344px rgba(0, 0, 0, 0.87));
+	transition: .2s linear, 0s linear transform;
+}
+.music__element:active{
+	transform: translate(0px, 2px);
+}
+.music__element:hover{
+	box-shadow:none;
+	background: var(--white);
+	color: black;
+}
+.music__element__efect svg:first-child,
+.music__element__sond svg:first-child{
+	display: block;
+}
+.music__element__efect svg:last-child,
+.music__element__sond svg:last-child{
+	display: none;
+}
+.music__element__efect--active svg:first-child,
+.music__element__sond--active svg:first-child{
+	display: none;
+}
+.music__element__efect--active svg:last-child,
+.music__element__sond--active svg:last-child{
+	display: block;
+}
+.music__element:hover svg path{
+	fill: black;
+	transition: .2s linear;
 }
 @media(max-width: 760px) {
 	.main{
