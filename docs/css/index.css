@@ -9,10 +9,53 @@
 	width: 33%;
 	max-width: 33%;
 	margin: auto;
-	height: 350px;
+	height: 450px;
 }
 .content__div__historia{
+	position: relative;
 	overflow: auto;
+	padding-bottom: 20px;
+}
+
+.content__div__historia__tapa{
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	opacity: .9;
+	position: absolute;
+	left: 0;
+	z-index: 500;
+	transition: .3s linear;
+}
+.content__div__historia__tapa > p{
+	animation: color-p 5s linear infinite;
+	cursor: pointer;
+	font-size: 2.4em !important;
+}
+.content__div__historia__tapa--p{
+	background: transparent;
+}
+.content__div__historia__tapa--p > p{
+	display: none;
+}
+.content__div__historia__tapa--desactive{
+	z-index: -100;
+	opacity: 0;
+}
+
+@keyframes color-p {
+	0%{
+   opacity: 1;
+   text-shadow: 0px 0px 5px white;
+	}			
+	50%{
+		opacity: .1;
+		text-shadow: 0px 10px 5px white;
+	}
+	100%{
+		opacity: 1;
+		text-shadow: 0px 0px 5px white;
+	}
 }
 .content__div__historia::-webkit-scrollbar{
   width: 5px;
@@ -25,6 +68,16 @@
 .content__div__historia p{
 	text-shadow: 0px 0px 2px black;
 	font-size: 1.7em;
+}
+.content__div__option--none{
+	display: none;
+}
+.content__div__element{
+	opacity: 0;
+	transition: linear .5s;
+}
+.content__div__element--aparecer{
+	opacity: 1;
 }
 .content__div--levels{
 
@@ -54,11 +107,17 @@ form{
 .button{
 	padding: 3px 15px;
 }
+.button--option--pause{
+	transition: .5s linear opacity 5s linear height;
+	opacity: 0;
+	height: 0px;
+}
 .p__dialogo{
 	text-align: left;
 	margin-left: 30px;
 	line-height: 29px;
 	color: white;
+	opacity: 1;
 }
 .p__dialogo::before{
 	content: "•";
@@ -111,7 +170,7 @@ form{
 .caja{
 	width: 30%;
 	margin: auto;
-	height: 150px;
+	height: 200px;
 	box-sizing: border-box;
 }
 .caja span{
@@ -137,4 +196,14 @@ form{
 }
 .caja__active span{
 	display: block;
+}
+@media(max-width: 768px){
+	.content{
+		flex-direction: column;
+	}
+	.content__div{
+		width: 70%;
+		max-width: 80%;
+		margin-bottom: 20px;
+	}
 }

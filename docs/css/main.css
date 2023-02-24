@@ -140,6 +140,7 @@ body::-webkit-scrollbar-thumb {
 .button:active{
 	transform: translate(0px, 2px);
 }
+.button--press,
 .button:hover{
 	box-shadow:none;
 	background: var(--white);
@@ -288,6 +289,10 @@ body::-webkit-scrollbar-thumb {
 	fill: black;
 	transition: .2s linear;
 }
+
+
+
+
 @media(max-width: 760px) {
 	.main{
 		font-size: 8px;

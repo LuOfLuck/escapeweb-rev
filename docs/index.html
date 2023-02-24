@@ -34,21 +34,12 @@
 			</p>
 		</header>
 		<content class="content centrar ">
-			<div class="content__div content__div__historia border-drop">
-				<p class="p__narro p--koho"> Se empieza a escuchar ruido desde el fondo...</p>
-				<p class="p__dialogo p--koho"> HO’HOLA!!</p>
-				<p class="p__dialogo p--koho"> ¿ERES UNA PERSONA?</p>
-				<p class="p__dialogo p--koho"> NO LO PUEDO  CREER?</p>
-				<p class="p__dialogo p--koho">¿COMO ENTRASTE AQUI?|</p>
-				<p class="p__dialogo p--koho"> NO TENGO MUCHO TIEMPO POR FAVOR AYUDAME!</p>
-				<div class="content__div__option">
-					<div class="content__div__option centrar">
-						<button class="button button--option">¿quien eres?</button>
-						<button class="button button--option">¿que esta pasando?</button>
-					</div>
+			<div id="chat" class="content__div content__div__historia border-drop">
+				<div id="tab" class="content__div__historia__tapa  centrar">
+					<p class=" p--lacquer">
+						press me
+					</p>	
 				</div>
-				<p class="p__dialogo p__dialogo--you p--koho">¿QUE ESTA PASANDO?</p>
-				<p class="p__dialogo p--koho"> NO, NO TENGO TIEMPO PARA EXPLICARLO. ESTOY AQUI ENCERRADO POR FAVOR AYUDAME</p>
 			</div>
 			<div class="content__div content__div--levels box--obscuro centrar centrar--lineal">
 				<h3 class="h3 p--lacquer">Level</h3>
@@ -64,7 +55,7 @@
 		<section class="section centrar centrar--lineal">
 			<h3 class="h3 p--lacquer">La historia comienza</h3>
 			<div class="section__game box--obscuro">
-				<p class="p--lacquer">Dentro de cada nivel tendras que buscar pistas, apretar botones, señalar texto, seguir patrones que te ayuden a encontrar una respuesta no clara pero precisa</p>
+				
 				<div class="section__game__cajas centrar">
 					<div class="caja  centrar caja__blue border-drop">
 						<span class="h3 p--lacquer">7</span>
@@ -78,6 +69,7 @@
 				</div>
 			</div>
 		</section>
+
 		<div id="music" class="music centrar">
 			<div id="music__efect" class="music__element music__element__efect">
 				<svg class="" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +92,10 @@
 				<audio id="background_sond" src="music/background_sond.mp3"></audio>
 			</div>
 		</div>
+
 	</main>
+	<script src="js/music.js"></script>
+	<script src="js/contenido.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
